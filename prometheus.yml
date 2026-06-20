@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+- job_name: 'genshin_api'
+  static_configs:
+  - targets: [ 'api:9101' ]
+
+- job_name: 'genshin_scraper'
+  static_configs:
+  - targets: [ 'scraper:9100' ]
